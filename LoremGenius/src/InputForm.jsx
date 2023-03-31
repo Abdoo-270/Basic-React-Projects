@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const InputForm = ({ setParaNum }) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(1);
   const handleSubmit = (e) => {
     e.preventDefault();
     setParaNum(inputValue);
