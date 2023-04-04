@@ -13,10 +13,12 @@ const Form = ({ setList, list }) => {
         id: new Date().getTime().toString(),
       };
       setList([itemObject, ...list]);
-      setInputValue("");
-      toast.success("item added succesfully");
     }
+    setInputValue("");
+    toast.success("item added succesfully");
   };
+  localStorage.setItem("list", JSON.stringify(list));
+
   return (
     <form onSubmit={handleSubmit}>
       <h4>Todo List App</h4>
