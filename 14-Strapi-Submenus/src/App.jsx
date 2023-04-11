@@ -1,4 +1,7 @@
+import { useGlobalContext } from "./context";
+
 const App = () => {
-  return <h2>Strapi Starter</h2>;
+  const { name } = useGlobalContext();
+  return <h2>wlecome..{name}</h2>;
 };
 export default App;
